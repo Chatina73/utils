@@ -10,16 +10,10 @@ import (
 	"math/rand/v2"
 	"os"
 	"slices"
-	"strings"
 	"time"
 )
 
-func Slash(text string) (string, string) {
-	before, after, _ := strings.Cut(text, "/")
-	return before, after
-}
-
-// A simple sum for naming fixture files in tests, e.g. based on an URL.
+// A simple sum for naming fixture files in tests, e.g. based on a URL.
 func Crc32(str string) string {
 	return fmt.Sprintf("%08x", crc32.ChecksumIEEE([]byte(str)))
 }
